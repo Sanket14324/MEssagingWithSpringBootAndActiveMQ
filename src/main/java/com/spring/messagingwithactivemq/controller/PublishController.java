@@ -40,7 +40,7 @@ public class PublishController {
 
 
     @GetMapping("/getMessage")
-//    @JmsListener(destination = "message-queue")
+
     public ResponseEntity<Object> consumeMessage(){
 
         Object obj = messageConsumer.getMessage();

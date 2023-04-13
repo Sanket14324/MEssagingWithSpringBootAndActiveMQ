@@ -26,14 +26,14 @@ public class MessageConsumer {
     }
 
 
-    public Object getMessage(){
+    public List<Object> getMessage(){
         if(list.isEmpty()){
             return null;
         }
 
-        Object obj = list.get(0);
-        list.remove(obj);
-        return obj;
+        List<Object> temp = new ArrayList<>(list);
+        list.removeAll(temp);
+        return temp;
     }
 
 
